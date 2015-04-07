@@ -13,5 +13,5 @@ hpc_sub<- transform(hpc_sub,DateTime = strptime(paste(Date,Time),"%d/%m/%Y %H:%M
 # Display it on the current device
 plot(hpc_sub[,DateTime],as.numeric(hpc_sub[,Global_active_power]),type="l",xlab="",ylab="Global Active Power (kilowatts)")
 # Copy it to the .png file
-dev.copy(png,file="plot2.png",units="px",height=480,width=480,pointsize=12,bg="white")#,type=c("cairo"),res=NA)
+dev.copy(png,file="plot2.png",units="px",height=480,width=480,pointsize=12,bg="white")
 dev.off()
